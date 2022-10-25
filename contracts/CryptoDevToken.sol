@@ -5,6 +5,10 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./ICryptoDevs.sol";
 
+/*
+    Contract address 0x6da7c14b57f6f1F43Bbef6Cf98A9EEAC0c093f5f
+*/
+
 contract CryptoDevToken is ERC20, Ownable {
     // Price of one Crypto Dev token
     uint256 public constant tokenPrice = 0.001 ether;
