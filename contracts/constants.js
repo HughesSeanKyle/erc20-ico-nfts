@@ -1,0 +1,1 @@
+export const CRYPTO_DEVS_NFT_CONTRACT_ADDRESS = '5fd5ds45f4sd4f4ds98f494d4f9';
