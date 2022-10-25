@@ -90,11 +90,19 @@ contract CryptoDevToken is ERC20, Ownable {
      * @dev withdraws all ETH and tokens sent to the contract
      * Requirements:
      * wallet connected must be owner's address
+
+     Only the owner/creator/msg.sender of this contract can call this function 
+     These ERC tokens are then withrawn from the contract to the wallet
      */
     function withdraw() public onlyOwner {
+        // Store owner's address in var
         address _owner = owner();
+        // this => refers to self (contract) address's balance
         uint256 amount = address(this).balance;
+
+        // Send the contract balance to contract's owner/msg.sender
         (bool sent, ) = _owner.call{value: amount}("");
+        // Require that above resolve to true else roll back function call
         require(sent, "Failed to send Ether");
     }
 
