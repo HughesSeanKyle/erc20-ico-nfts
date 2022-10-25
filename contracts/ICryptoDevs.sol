@@ -11,11 +11,10 @@ interface ICryptoDevs {
      * @dev Returns a token ID owned by `owner` at a given `index` of its token list.
      * Use along with {balanceOf} to enumerate all of ``owner``'s tokens.
      */
-     /*
+    /*
         See notes as to where these functions are defined. They are inherited and triggered by the mint function 
     */
     function tokenOfOwnerByIndex(address owner, uint256 index)
-
         external
         view
         returns (uint256 tokenId);
@@ -23,9 +22,8 @@ interface ICryptoDevs {
     /**
      * @dev Returns the number of tokens in ``owner``'s account.
      */
-     /*
+    /*
         See notes as to where these functions are defined. They are inherited and triggered by the mint function 
     */
-    function balanceOf(address owner) external view returns (uint256 balance)
-
+    function balanceOf(address owner) external view returns (uint256 balance);
 }
